@@ -5,12 +5,10 @@ import ClubInvolvement from "../pages/ClubInvolvement.tsx";
 import ProfessionalExperience from "../pages/ProfessionalExperience.tsx";
 import VolunteerExperience from "../pages/VolunteerExperience.tsx";
 import Projects from "../pages/Projects.tsx";
-import Nav from "../components/Nav";
 
 export default function Root() {
     return(
         <>
-            <Nav/>
             <Routes>
                 <Route path = {"/"} element = {<Home />}/>
                 <Route path ={"./pages/Education"} element = {<Education />}/>
