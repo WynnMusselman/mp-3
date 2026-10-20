@@ -12,6 +12,8 @@ const InputStyle = styled.input`
     width: 15vw;
     border: 2px dashed #344966;
     background-color: #BFCC94;
+    padding: 3%;
+    font-size: calc(2px + 1.2vw);
 
     //to style the placeholder, I consulted the styled component docs: https://styled-components.com/docs/advanced#referring-to-other-components
     &::placeholder{
@@ -19,8 +21,8 @@ const InputStyle = styled.input`
     }
 `;
 
-const OutputStyle = styled.h3<{$output: number}> `
-    color: ${props => props.$output < 0 ? "#344966" : "red"};
+const OutputStyle = styled.h3 `
+    color: ${props => props.resulting_num > 0 ? "#344966" : "red"};
 `
 
 const ButtonStyle = styled.button`
@@ -124,7 +126,7 @@ export default function Calculator() {
                     </InnerCol>
                 </div>
 
-                <OutputStyle $output>{output}</OutputStyle>
+                <OutputStyle resulting_num = "output">{output}</OutputStyle>
             </div>
 
 

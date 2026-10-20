@@ -6,10 +6,19 @@ const NavStyle = styled.nav`
     background-color: #BFCC94;
     width: 30%;
     padding: 4%;
+
+    @media screen and (max-width: 750px){
+        width: 100%;
+
 `
 const UlStyle = styled.ul`
     padding: 0;
     list-style: none;
+
+
+    @media screen and (max-width: 750px){
+        display: flex;
+        flex-direction: row;
 `
 const LiStyle = styled.li`
     background-color: #B4CDED;
@@ -17,6 +26,11 @@ const LiStyle = styled.li`
     text-align: center;
     margin: 10% auto;
     padding: 4%;
+
+    @media screen and (max-width: 750px){
+        margin: 2%;
+        padding: 1%;
+        width: 100%; /*makes each nav box the same size*/
 `
 
 const LinkStyle = styled(Link) `

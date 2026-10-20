@@ -46,9 +46,12 @@ export default function ProfessionalExperience() {
                         while integrating the custom assets within a Java Swing Interface
                     </p>
                 </div>
+
+                {/*calculator*/}
+                <Calculator />
             </main>
 
-            <Calculator />
+
         </>
     )
 }

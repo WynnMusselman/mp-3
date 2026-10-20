@@ -10,6 +10,9 @@ const HeaderStyle = styled.header `
 
 const H1Style = styled.h1 `
     font: calc(2px + 4vw) damion, sans-serif, sans;
+
+    @media screen and (max-width: 750px){
+        text-align: center;
 `;
 
 const PStyle = styled.p `

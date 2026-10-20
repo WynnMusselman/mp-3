@@ -76,15 +76,8 @@ const GlobalStyle = createGlobalStyle`
     /*when the screen is shrunk*/
     @media screen and (max-width: 750px){
 
-        /*header*/
-        header{
-            text-align: center;
-        }
-
-        /*navigation*/
-        #nav-main-col{
-            flex-direction: column;
-        }
+      
+        
 
         nav ul{
             display: flex;

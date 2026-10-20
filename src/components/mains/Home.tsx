@@ -18,7 +18,7 @@ export default function Home() {
                     <ImgStyle src={headshot} alt="Headshot of Wynn Musselman"></ImgStyle>
 
                     <p>
-                        Hello! My name is Wynn Musselman, and I am a student at Boston University.
+                        Hello! My name is Wynn Musselman and I am a student at Boston University.
                         I am studying Computer Science with a minor in Political Science.
                         During previous semesters, I interned at BU's EL Connector office and completed
                         an internship in Paris for a tech start-up. Currently, I am the Bytes Lead for
