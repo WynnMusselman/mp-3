@@ -1,3 +1,5 @@
+import Calculator from "../Calculator.tsx";
+
 
 export default function ProfessionalExperience() {
     return(
@@ -45,6 +47,8 @@ export default function ProfessionalExperience() {
                     </p>
                 </div>
             </main>
+
+            <Calculator />
         </>
     )
 }

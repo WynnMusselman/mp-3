@@ -1,13 +1,6 @@
 import headshot from "../../assets/professional-headshot.jpg";
 import styled from "styled-components";
 
-const TwoCol = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-`
-
 const ImgStyle = styled.img`
     max-width: 30vw;
     padding: 3%;
@@ -20,7 +13,7 @@ export default function Home() {
             <main>
                 <h2>About Me</h2>
 
-                <TwoCol>
+                <div className = "two-col">
 
                     <ImgStyle src={headshot} alt="Headshot of Wynn Musselman"></ImgStyle>
 
@@ -35,7 +28,7 @@ export default function Home() {
                         For fun, I like to hang out with friends, play video games, code my own projects,
                         and explore Boston!
                     </p>
-                </TwoCol>
+                </div>
 
                 <p>
                     On this website, you will find my education, experience, project, and other information

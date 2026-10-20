@@ -48,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     /*styles sections of information on different pages*/
+    
     .info-section{
         margin: 3%;
     }
@@ -59,6 +60,16 @@ const GlobalStyle = createGlobalStyle`
 
     .info-section p{
         padding: 0.5%;
+    }
+    
+    
+    //creates a two column layout
+    
+    .two-col{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
     }
     
 

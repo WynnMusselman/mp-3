@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 
 
 const InnerCol = styled.div`
@@ -6,6 +7,7 @@ const InnerCol = styled.div`
     flex-direction: column;
     margin: auto 2%;
 `;
+
 const InputStyle = styled.input`
     width: 15vw;
     border: 2px dashed #344966;
@@ -16,6 +18,10 @@ const InputStyle = styled.input`
         visibility: hidden;
     }
 `;
+
+const OutputStyle = styled.h3<{$output: number}> `
+    color: ${props => props.$output < 0 ? "#344966" : "red"};
+`
 
 const ButtonStyle = styled.button`
     width: 8vw;
@@ -39,8 +45,44 @@ const LabelStyle = styled.label`
 
 
 export default function Calculator() {
+    const [firstNum, setFirstNum] = useState("");
+    const [secondNum, setSecondNum] = useState("");
+    const [output, setOutput] = useState(0);
+
+    function doAdd(){
+        setOutput(Number(firstNum) + Number(secondNum));
+    }
+
+    function doSub(){
+        setOutput(Number(firstNum) - Number(secondNum));
+    }
+
+    function doMul(){
+        setOutput(Number(firstNum) * Number(secondNum));
+    }
+
+    function doDiv(){
+        setOutput(Number(firstNum) - Number(secondNum));
+    }
+
+    function doPow(){
+        let temp = 1;
+
+        for(let i = 1; i <= Number(secondNum); i++){
+            temp = Number(firstNum) * Number(temp);
+        }
+        setOutput(Number(temp));
+    }
+
+
+    function doClear(){
+        setFirstNum("");
+        setSecondNum("");
+        setOutput(0);
+    }
+
     return(
-        <>
+        <main>
             <div className="info-section">
                 <h3>My Calculator</h3>
                 <p>September 2026</p>
@@ -48,31 +90,36 @@ export default function Calculator() {
                 <div className="two-col">
 
                     <InnerCol>
-                        <LabelStyle htmlFor="first">first Number:</LabelStyle><InputStyle id="first" placeholder="first number"/>
-                        <LabelStyle htmlFor="second">Second Number:</LabelStyle><InputStyle id="second" placeholder="second number"/>
+                        {/*first number input*/}
+                        <LabelStyle htmlFor="first">first Number:</LabelStyle>
+                        <InputStyle id="first" placeholder="first number"/>
+
+                        {/*second number input*/}
+                        <LabelStyle htmlFor="second">Second Number:</LabelStyle>
+                        <InputStyle id="second" placeholder="second number"/>
                     </InnerCol>
 
                     <InnerCol>
 
                         <div className="two-col">
                             <InnerCol className="inner-col">
-                                <ButtonStyle onclick="doAdd">+</ButtonStyle>
-                                <ButtonStyle onClick="doSub()">-</ButtonStyle>
-                                <ButtonStyle onClick="doMul()">*</ButtonStyle>
+                                <ButtonStyle onClick = {doAdd}>+</ButtonStyle>
+                                <ButtonStyle onClick={doSub}>-</ButtonStyle>
+                                <ButtonStyle onClick={doMul}>*</ButtonStyle>
                             </InnerCol>
                             <InnerCol className="inner-col">
-                                <ButtonStyle onClick="doDiv()">/</ButtonStyle>
-                                <ButtonStyle onClick="doPow()">^</ButtonStyle>
-                                <ButtonStyle onClick="doClear()">clear</ButtonStyle>
+                                <ButtonStyle onClick={doDiv}>/</ButtonStyle>
+                                <ButtonStyle onClick={doPow}>^</ButtonStyle>
+                                <ButtonStyle onClick={doClear}>clear</ButtonStyle>
                             </InnerCol>
                         </div>
                     </InnerCol>
                 </div>
 
-                <h3 id="output"></h3>
+                <OutputStyle $output>{output}</OutputStyle>
             </div>
 
 
-        </>
+        </main>
     )
 }
