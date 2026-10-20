@@ -92,11 +92,19 @@ export default function Calculator() {
                     <InnerCol>
                         {/*first number input*/}
                         <LabelStyle htmlFor="first">first Number:</LabelStyle>
-                        <InputStyle id="first" placeholder="first number"/>
+                        <InputStyle
+                            placeholder="first number"
+                            value = {firstNum}
+                            onChange = {(e) => setFirstNum(e.target.value)}
+                        />
 
                         {/*second number input*/}
                         <LabelStyle htmlFor="second">Second Number:</LabelStyle>
-                        <InputStyle id="second" placeholder="second number"/>
+                        <InputStyle
+                            placeholder="second number"
+                            value = {secondNum}
+                            onChange = {(e) => setSecondNum(e.target.value)}
+                        />
                     </InnerCol>
 
                     <InnerCol>
