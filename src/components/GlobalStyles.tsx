@@ -33,12 +33,6 @@ const GlobalStyle = createGlobalStyle`
     /*main*/
     main{
         width: 70%;
-
-        /*
-            I used min-height instead of height because height is more rigid and my content
-            was overflowing on some pages. Min-height just sets a floor value and allowed my
-            content to fill the page and not overflow
-        */
         min-height: 100vh;
         text-align: center;
     }
@@ -48,10 +42,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     /*styles sections of information on different pages*/
-    
-    .info-section{
-        margin: 3%;
-    }
 
     .info-section h3{
         padding: 0.5%;
@@ -76,23 +66,7 @@ const GlobalStyle = createGlobalStyle`
     /*when the screen is shrunk*/
     @media screen and (max-width: 750px){
 
-      
         
-
-        nav ul{
-            display: flex;
-            flex-direction: row;
-            /*justify-content: center;*/
-        }
-        nav ul li{
-            margin: 2%;
-            padding: 1%;
-            width: 100%; /*makes each nav box the same size*/
-        }
-
-        nav, main{
-            width: 100%;
-        }
 
         /*two column display*/
         .two-col{
@@ -109,21 +83,6 @@ const GlobalStyle = createGlobalStyle`
         .inner-col{
             flex-direction: row;
             justify-content: center;
-        }
-
-        label{
-            display: none;
-        }
-
-        input{
-            margin: 2%;
-            padding: 5%;
-        }
-
-        input::placeholder{
-            visibility: visible;
-            font: calc(2px + 1.8vw) damion, sans-serif, sans;
-            color: #344966;
         }
     }
     

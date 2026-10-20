@@ -6,6 +6,10 @@ const HeaderStyle = styled.header `
 
     padding: 2%;
     text-align: left;
+
+    @media screen and (max-width: 750px){
+        width: 100%;
+    }
 `;
 
 const H1Style = styled.h1 `

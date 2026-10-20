@@ -7,6 +7,11 @@ const InnerCol = styled.div`
     display: flex;
     flex-direction: column;
     margin: auto 2%;
+    
+    @media screen and (max-width: 750px){
+        flex-direction: row;
+        justify-content: center;
+    }
 `;
 
 const InputStyle = styled.input`
@@ -19,6 +24,17 @@ const InputStyle = styled.input`
     //to style the placeholder, I consulted the styled component docs: https://styled-components.com/docs/advanced#referring-to-other-components
     &::placeholder{
         visibility: hidden;
+    }
+
+    @media screen and (max-width: 750px){
+        margin: 2%;
+        padding: 5%;
+
+        &::placeholder{
+            visibility: visible;
+            font: calc(2px + 1.8vw) damion, sans-serif, sans;
+            color: #344966;
+        }
     }
 `;
 
