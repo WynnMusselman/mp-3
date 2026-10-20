@@ -5,7 +5,7 @@ import ClubInvolvement from "./mains/ClubInvolvement.tsx";
 import ProfessionalExperience from "./mains/ProfessionalExperience.tsx";
 import VolunteerExperience from "./mains/VolunteerExperience.tsx";
 import Projects from "./mains/Projects.tsx";
-import Nav from "../components/Nav";
+import Nav from "./Nav.tsx";
 
 export default function Root() {
     return(

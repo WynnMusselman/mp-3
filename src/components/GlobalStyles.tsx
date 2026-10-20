@@ -67,32 +67,6 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
     }
 
-    nav{
-        background-color: #BFCC94;
-        width: 30%;
-    }
-
-    nav ul{
-        padding: 0;
-        list-style: none;
-        margin: 4%;
-    }
-
-    nav ul li{
-        background-color: #B4CDED;
-        border: 2px dashed #344966;
-        text-align: center;
-
-        /*auto - centers list items*/
-        margin: 10% auto;
-        padding: 4%;
-    }
-
-    nav ul li a{
-        text-decoration: none;
-        color: #344966;
-        font: calc(2px + 1.4vw) damion, sans-serif, sans;
-    }
 
     /*main*/
     main{
