@@ -60,43 +60,6 @@ const GlobalStyle = createGlobalStyle`
     .info-section p{
         padding: 0.5%;
     }
-
-    /*calculator section*/
-    .inner-col{
-        display: flex;
-        flex-direction: column;
-        margin: auto 2%;
-    }
-
-    .inner-col input{
-        width: 15vw;
-        border: 2px dashed #344966;
-        background-color: #BFCC94;
-
-    }
-
-    .inner-col button{
-        width: 8vw;
-        margin: 2%;
-        padding: 2%;
-
-        background-color: #344966;
-        color: #F0F4EF;
-        font: calc(2px + 1.8vw) damion, sans-serif, sans;
-        border: 2px dashed #BFCC94;
-    }
-
-    .inner-col button:hover{
-        background-color: #213347;
-    }
-
-    label{
-        font: calc(2px + 1.4vw) damion, sans-serif, sans;
-    }
-
-    input::placeholder{
-        visibility: hidden;
-    }
     
 
     /*when the screen is shrunk*/
