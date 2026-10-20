@@ -1,13 +1,7 @@
-import Header from "../components/Header.tsx";
-import Nav from "../components/Nav.tsx";
-import Footer from "../components/Footer.tsx";
 
 export default function Home() {
     return (
         <>
-            <Header />
-            <Nav />
-
             <main>
                 <h2>About Me</h2>
 
@@ -32,9 +26,6 @@ export default function Home() {
                     that may be of interest for you.
                 </p>
             </main>
-
-            <Footer />
-
         </>
     )
 }
