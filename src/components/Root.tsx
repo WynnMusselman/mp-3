@@ -39,11 +39,11 @@ export default function Root() {
                     <Nav />
                     <Routes>
                         <Route path = {"/"} element = {<Home />}/>
-                        <Route path ={"./pages/Education"} element = {<Education />}/>
-                        <Route path ={"./pages/ClubInvolvement"} element = {<ClubInvolvement />}/>
-                        <Route path ={"./pages/ProfessionalExperience"} element = {<ProfessionalExperience />}/>
-                        <Route path ={"./pages/VolunteerExperience"} element = {<VolunteerExperience />}/>
-                        <Route path ={"./pages/Projects"} element = {<Projects />}/>
+                        <Route path ={"/Education"} element = {<Education />}/>
+                        <Route path ={"/ClubInvolvement"} element = {<ClubInvolvement />}/>
+                        <Route path ={"/ProfessionalExperience"} element = {<ProfessionalExperience />}/>
+                        <Route path ={"/VolunteerExperience"} element = {<VolunteerExperience />}/>
+                        <Route path ={"/Projects"} element = {<Projects />}/>
                     </Routes>
                 </NavMainCol>
 

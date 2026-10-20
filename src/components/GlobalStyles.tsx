@@ -1,4 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import damion_font from "../assets/Damion/Damion-Regular.ttf";
+
 
 const GlobalStyle = createGlobalStyle`
     *{
@@ -9,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     /*damion font*/
     @font-face {
         font-family: damion;
-        src: url('../assets/Damion/Damion-Regular.ttf');
+        src: url("${damion_font}");
     }
     
 
@@ -27,16 +29,7 @@ const GlobalStyle = createGlobalStyle`
         color: #172B3A;
         font-size: calc(2px + 1.4vw);
     }
-
-    /*creates a two column layout */
-    .two-col{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-
-
+    
     /*main*/
     main{
         width: 70%;
@@ -48,11 +41,6 @@ const GlobalStyle = createGlobalStyle`
         */
         min-height: 100vh;
         text-align: center;
-    }
-
-    main img{
-        max-width: 30vw;
-        padding: 3%;
     }
 
     main p{

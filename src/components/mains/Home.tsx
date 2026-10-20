@@ -1,4 +1,18 @@
+import headshot from "../../assets/professional-headshot.jpg";
 import styled from "styled-components";
+
+const TwoCol = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+`
+
+const ImgStyle = styled.img`
+    max-width: 30vw;
+    padding: 3%;
+`
+
 
 export default function Home() {
     return (
@@ -6,9 +20,9 @@ export default function Home() {
             <main>
                 <h2>About Me</h2>
 
-                <div>
+                <TwoCol>
 
-                    <img src="../../assets/professional-headshot.jpg" alt="Headshot of Wynn Musselman"/>
+                    <ImgStyle src={headshot} alt="Headshot of Wynn Musselman"></ImgStyle>
 
                     <p>
                         Hello! My name is Wynn Musselman, and I am a student at Boston University.
@@ -21,7 +35,8 @@ export default function Home() {
                         For fun, I like to hang out with friends, play video games, code my own projects,
                         and explore Boston!
                     </p>
-                </div>
+                </TwoCol>
+
                 <p>
                     On this website, you will find my education, experience, project, and other information
                     that may be of interest for you.
