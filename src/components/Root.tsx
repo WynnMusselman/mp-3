@@ -5,11 +5,14 @@ import ClubInvolvement from "./mains/ClubInvolvement.tsx";
 import ProfessionalExperience from "./mains/ProfessionalExperience.tsx";
 import VolunteerExperience from "./mains/VolunteerExperience.tsx";
 import Projects from "./mains/Projects.tsx";
+import Header from "./Header.tsx"
 import Nav from "./Nav.tsx";
+import Footer from "./Footer.tsx";
 
 export default function Root() {
     return(
         <>
+            <Header />
             <Nav />
             <Routes>
                 <Route path = {"/"} element = {<Home />}/>
@@ -19,6 +22,7 @@ export default function Root() {
                 <Route path ={"./pages/VolunteerExperience"} element = {<VolunteerExperience />}/>
                 <Route path ={"./pages/Projects"} element = {<Projects />}/>
             </Routes>
+            <Footer />
         </>
     )
 }

@@ -19,24 +19,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: damion;
         //src: url(src/Damion/Damion-Regular.ttf);
     }
-
-    /*header*/
-    header{
-        background-color: #344966;
-        color: #F0F4EF;
-
-        padding: 2%;
-        text-align: left;
-    }
-
-    header p{
-        color: #F0F4EF;
-    }
+    
 
     /*text styling*/
-    h1{
-        font: calc(2px + 4vw) damion, sans-serif, sans;
-    }
+    
 
     h2{
         font: calc(2px + 3.3vw) damion, sans-serif, sans;
@@ -140,18 +126,7 @@ const GlobalStyle = createGlobalStyle`
     input::placeholder{
         visibility: hidden;
     }
-
-    /*footer*/
-    footer{
-        background-color: #344966;
-        text-align: center;
-
-        padding: 1%;
-    }
-
-    footer a, footer p{
-        color: #F0F4EF;
-    }
+    
 
     /*when the screen is shrunk*/
     @media screen and (max-width: 750px){
