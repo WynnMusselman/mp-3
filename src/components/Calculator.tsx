@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState} from "react";
+import {useColor} from "../useColor.ts";
 
 
 const InnerCol = styled.div`
@@ -21,9 +22,10 @@ const InputStyle = styled.input`
     }
 `;
 
-const OutputStyle = styled.h3 `
-    color: ${props => props.resulting_num > 0 ? "#344966" : "red"};
-`
+const OutputStyle = styled.h3`
+    color: ${(props) => props.theme === true ? "red" : "red"};
+    //"#344966"
+`;
 
 const ButtonStyle = styled.button`
     width: 8vw;
@@ -50,6 +52,7 @@ export default function Calculator() {
     const [firstNum, setFirstNum] = useState("");
     const [secondNum, setSecondNum] = useState("");
     const [output, setOutput] = useState(0);
+
 
     function doAdd(){
         setOutput(Number(firstNum) + Number(secondNum));
@@ -126,7 +129,7 @@ export default function Calculator() {
                     </InnerCol>
                 </div>
 
-                <OutputStyle resulting_num = "output">{output}</OutputStyle>
+                <OutputStyle style={{color:useColor(output)}}>{output}</OutputStyle>
             </div>
 
 
