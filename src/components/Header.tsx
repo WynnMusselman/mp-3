@@ -21,6 +21,9 @@ const H1Style = styled.h1 `
 
 const PStyle = styled.p `
     color: #F0F4EF;
+
+    @media screen and (max-width: 750px){
+        text-align: center;
 `;
 
 

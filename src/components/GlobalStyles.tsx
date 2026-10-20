@@ -67,7 +67,11 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 750px){
 
         
-
+        main{
+            margin: auto;
+        }
+        
+        
         /*two column display*/
         .two-col{
             display: flex;
