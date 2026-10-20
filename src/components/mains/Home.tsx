@@ -1,3 +1,4 @@
+import styled from "styled-components";
 
 export default function Home() {
     return (
@@ -7,7 +8,7 @@ export default function Home() {
 
                 <div>
 
-                    <img src="" alt="Headshot of Wynn Musselman"/>
+                    <img src="../../assets/professional-headshot.jpg" alt="Headshot of Wynn Musselman"/>
 
                     <p>
                         Hello! My name is Wynn Musselman, and I am a student at Boston University.

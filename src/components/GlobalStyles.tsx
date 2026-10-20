@@ -6,24 +6,14 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
 
-    .page-wrapper{
-        width: 80vw;
-        margin: 0 auto;
-        background-color: #F0F4EF;
-    }
-
-    /*fonts*/
-
-    /*damion*/
+    /*damion font*/
     @font-face {
         font-family: damion;
-        //src: url(src/Damion/Damion-Regular.ttf);
+        src: url('../assets/Damion/Damion-Regular.ttf');
     }
     
 
     /*text styling*/
-    
-
     h2{
         font: calc(2px + 3.3vw) damion, sans-serif, sans;
         padding: 3%;
@@ -43,13 +33,6 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        width: 100%;
-    }
-
-    /*nav*/
-    #nav-main-col{
-        display: flex;
-        flex-direction: row;
         width: 100%;
     }
 
@@ -188,9 +171,7 @@ const GlobalStyle = createGlobalStyle`
             color: #344966;
         }
     }
-
-
-
+    
 `
 
 export default function GlobalStyles() {
